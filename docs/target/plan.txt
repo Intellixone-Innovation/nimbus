@@ -1,0 +1,5 @@
+Targets:
+
+1. Intigration with Palm API 
+2. Opening apps 
+3. Opening websites
