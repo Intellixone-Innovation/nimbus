@@ -1,6 +1,7 @@
 import speech_recognition as sr
 import pyttsx3
 from functions import chat  # Import the functions from chat.py
+from functions import openfunc  # Import the function from openfunc.py
 
 # Initialize the speech recognizer
 recognizer = sr.Recognizer()
@@ -48,11 +49,15 @@ def respond_to_user_input(user_input):
     if "exit" in user_input:
         response = "Goodbye! Exiting..."
         print("Response:", response)
+        speak(response)
         exit()  # Exit the program
 
     # Define a list of keyword-response pairs
     keyword_responses = [
         ("hello", "Hello! How can I assist you today?"),
+        ("hello nimbus", "Hello! How can I assist you today?"),
+        ("what is nimbus", "It is a desktop assistant, created by Debarshee for allround service."),
+        ("what are you doing", "I am a desktop assistant, but i am doing fine.")
     ]
 
     # Check if any keyword is present in the user input
@@ -60,6 +65,10 @@ def respond_to_user_input(user_input):
         if keyword in user_input:
             response = reply
             break  # Exit the loop if a matching keyword is found
+        
+        elif "open" in user_input:
+            response = openfunc.handle_open_request(user_input)
+        
         else:
             response = chat.custom_chatbot(user_input)
 
