@@ -2,6 +2,8 @@ import speech_recognition as sr
 import pyttsx3
 from functions import chat  # Import the functions from chat.py
 from functions import openfunc  # Import the function from openfunc.py
+from functions import playfunc  # Import the function from playfunc.py
+from functions import sendfunc  # Import the function from sendfunc.py
 
 # Initialize the speech recognizer
 recognizer = sr.Recognizer()
@@ -68,6 +70,15 @@ def respond_to_user_input(user_input):
         
         elif "open" in user_input:
             response = openfunc.handle_open_request(user_input)
+            break
+        
+        elif "open" in user_input:
+            response = playfunc.handle_play_request(user_input)
+            break
+        
+        elif "send" in user_input:
+            response = sendfunc.handle_send_request(user_input)
+            break
         
         else:
             response = chat.custom_chatbot(user_input)
