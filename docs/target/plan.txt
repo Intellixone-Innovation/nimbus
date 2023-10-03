@@ -1,5 +1,12 @@
 Targets:
 
-1. Intigration with Palm API 
-2. Opening apps 
-3. Opening websites
+1. Intigration with Palm API: Chat and Reply feature. 
+2. Opening apps. 
+3. Opening websites. 
+4. Playing music. 
+5. Playing videos in YouTube. 
+6. Read notifications. 
+7. Sending mail. 
+8. Sending messages. 
+9. Telling news. 
+10. Telling market information. 
