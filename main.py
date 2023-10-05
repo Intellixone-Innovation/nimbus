@@ -4,6 +4,8 @@ from functions import chat  # Import the functions from chat.py
 from functions import openfunc  # Import the function from openfunc.py
 from functions import playfunc  # Import the function from playfunc.py
 from functions import sendfunc  # Import the function from sendfunc.py
+from functions import reply  # Import the function from reply.py
+
 
 # Initialize the speech recognizer
 recognizer = sr.Recognizer()
@@ -59,7 +61,13 @@ def respond_to_user_input(user_input):
         ("hello", "Hello! How can I assist you today?"),
         ("hello nimbus", "Hello! How can I assist you today?"),
         ("what is nimbus", "It is a desktop assistant, created by Debarshee for allround service."),
-        ("what are you doing", "I am a desktop assistant, but i am doing fine.")
+        ("what are you doing", "I am working as a virtual assistant."),
+        ("how are you doing", "I am a virtual assistant, but i am doing fine."),
+        ("tell me about your self", reply.introduction()),
+        ("tell me about your creator", reply.creator()),
+        ("tell me about your startup", reply.startup()),
+        ("what can you do", reply.purpose()),
+        ("what purpose do you serve", reply.purpose()),
     ]
 
     # Check if any keyword is present in the user input
