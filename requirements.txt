@@ -1,6 +1,0 @@
-speechRecognition
-pyttsx3
-pyaudio
-wikipediaapi
-pytube
-pygame

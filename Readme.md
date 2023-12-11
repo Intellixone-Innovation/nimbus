@@ -1,1 +1,1 @@
-![Logo](nimbuslogo.png)
+![Logo](/assets/images/nimbuslogo.png)
